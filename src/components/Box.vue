@@ -27,7 +27,7 @@ export default {
   color: antiquewhite;
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   width: 80%;
 }
 #id1 {

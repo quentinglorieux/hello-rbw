@@ -1,8 +1,9 @@
 <template>
   <div>
-  <img alt="Vue logo" src="./assets/logo.png">
   <BoxList />
   <BoxList2 />
+    <img alt="Vue logo" src="./assets/logo.png">
+    <h1> Made with Vue by the RbW team </h1>
   </div>
 </template>
 

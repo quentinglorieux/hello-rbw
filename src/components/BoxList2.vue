@@ -1,7 +1,7 @@
 <template>
     <div class="columns is-vcentered">
-        <div v-for="item in sharedState" class="column" v-bind:key="item.id" >
-            Directus: <Box v-bind:member="item"> </Box> 
+        <div v-for="member in members" class="column" :key="member.id" >
+            Directus import: <Box :member="member"> </Box> 
         </div>
     </div>
 </template>
@@ -15,13 +15,13 @@ import Box from './Box.vue';
 export default {
     data () {         
         return {
-        sharedState: null       
+        members: null       
         } 
     },
     async created() {
         const directus = new Directus('https://directus.rubidiumweb.eu/');
         const response = await directus.items('Members').readMany();
-        this.sharedState = response.data;
+        this.members = response.data;
     },
     components: {
         Box, 
