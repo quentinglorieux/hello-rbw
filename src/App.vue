@@ -1,18 +1,25 @@
 <template>
+  <div>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <BoxList />
+  </div>
 </template>
 
+
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BoxList from './components/BoxList.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BoxList,
   }
 }
 </script>
+
+
+
 
 <style>
 #app {
