@@ -7,8 +7,6 @@
   </div>
 </template>
 
-
-
 <script>
 import BoxList from './components/BoxList.vue'
 import BoxList2 from './components/BoxList2.vue'
@@ -21,8 +19,6 @@ export default {
   }
 }
 </script>
-
-
 
 
 <style>
