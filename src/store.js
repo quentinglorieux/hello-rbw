@@ -7,7 +7,7 @@
 // seedData corresponds to the constant's name in seed.js : export const seedData 
 
 
-// import { seedData } from './seed.js';
+// import { seedData } from './assets/seed.js';
 // console.log(seedData)
 // export const store = { 
 //     state1: {
@@ -18,32 +18,13 @@
 
 //Import data : method 2 - json file 
 
-import dataJson from "./members.json";
+import dataJson from "./assets/json/members.json";
 //console.log(dataJson);
 export const store = { 
   state1: {
      data2: dataJson
   }
 }
-
-// import dataJson from "./members.json";
-// export default {
-//     data() {
-//         return {
-//             store: false
-//         }  
-//     },
-//     created() {
-//         this.getDataFromDirectus() 
-//     },
-//     methods:{
-//         getDataFromDirectus() {
-//             this.store2 = { state1: { data2: dataJson} }
-//             this.store = true
-//         }
-//     }
-    
-// }
 
 
 

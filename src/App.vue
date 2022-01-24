@@ -2,6 +2,7 @@
   <div>
   <img alt="Vue logo" src="./assets/logo.png">
   <BoxList />
+  <BoxList2 />
   </div>
 </template>
 
@@ -9,11 +10,13 @@
 
 <script>
 import BoxList from './components/BoxList.vue'
+import BoxList2 from './components/BoxList2.vue'
 
 export default {
   name: 'App',
   components: {
     BoxList,
+    BoxList2
   }
 }
 </script>
