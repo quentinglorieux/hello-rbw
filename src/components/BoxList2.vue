@@ -1,7 +1,7 @@
 <template>
     <div class="columns is-vcentered">
-        <div v-for="member in members" class="column" :key="member.id" >
-            Directus import: <Box :member="member"> </Box> 
+        <div v-for="item in members" class="column" :key="item.id" >
+            Directus import: <Box :member="item"> </Box> 
         </div>
     </div>
 </template>

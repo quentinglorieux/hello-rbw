@@ -4,13 +4,25 @@ import { seedData } from './assets/seed.js';
 //Import data : method 2 - json file 
 import dataJson from "./assets/json/members.json";
 
-//console.log(dataJson, seedData);
+//Import data : method 3 - directus API 
+import membersPromise from "./assets/memberApi.js";
+
+
+membersPromise().then( v => {
+    console.log(v);
+    return v;
+  });
+
+
 export const store = { 
   state: {
      dataJson: dataJson,
-     dataJs: seedData
-  }
+     dataJs: seedData,
+     dataApi: membersPromise().then( v => {return v} ), // doesnt work
 }
+}
+
+
 
 
 

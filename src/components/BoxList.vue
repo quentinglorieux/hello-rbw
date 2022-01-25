@@ -7,12 +7,20 @@
         </div>
     </div>
     <div id="json-column">
-    <p>json import: </p>
-    <div class="columns is-vcentered ">
-        <div v-for="memberJson in membersJson" class="column" :key="memberJson.id" >
-            <Box :member="memberJson">  </Box>
+        <p>JSON import: </p>
+        <div class="columns is-vcentered ">
+            <div v-for="memberJson in membersJson" class="column" :key="memberJson.id" >
+                <Box :member="memberJson">  </Box>
+            </div>
         </div>
     </div>
+    <div id="api-column">
+        <p>API import: </p>
+        <div class="columns is-vcentered ">
+            <div v-for="memberApi in membersApi" class="column" :key="memberApi.id" >
+                <Box :member="memberApi">  </Box>
+            </div>
+        </div>
     </div>
     </section>
 </template>
@@ -22,12 +30,15 @@
 import { store } from '../store.js';
 import Box from './Box.vue';
 
+console.log (store.state.dataApi);
+
 export default {
     name: 'BoxList',  
     data () {          
         return {
         members: store.state.dataJs,    
-        membersJson: store.state.dataJson 
+        membersJson: store.state.dataJson,
+        membersApi: store.state.dataApi, // still doesnt work
         } 
     },
     components: {
